@@ -1,0 +1,127 @@
+/* Thiết lập cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    width: 500px; /* Giữ nguyên kích thước 500px từ file gốc cho ảnh header */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+}
+
+/* Các section nội dung */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.about p b {
+    color: #d9534f; /* Màu nhấn cho thông tin quan trọng */
+}
+
+/* Sản phẩm / Hoạt động */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.item {
+    flex: 1 1 calc(33.333% - 40px); /* 3 cột trên màn hình lớn */
+    min-width: 250px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    color: #5cb85c;
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social a {
+    margin: 0 5px;
+}
+
+/* Media Query cho thiết bị nhỏ hơn */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column; /* Chuyển sang 1 cột trên điện thoại */
+    }
+
+    .item {
+        flex: 1 1 100%;
+    }
+
+    header img {
+        width: 100%;
+        max-width: 400px; /* Giới hạn lại trên thiết bị nhỏ */
+    }
+}
